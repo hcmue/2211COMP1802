@@ -5,14 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    <form action="XyLy.php" method="get">
+    <form action="XyLy.php" 
+        method="post" 
+        enctype="multipart/form-data">
         <table>
             <caption>ĐĂNG KÝ THÀNH VIÊN</caption>
             <tr>
                 <td>Họ tên</td>
-                <td><input name="hoten" /></td>
+                <td>
+                    <input name="hoten" required placeholder="Nhập" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input name="tendangnhap" />
+                </td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <td>
+                    <input type="password" name="matkhau" />
+                </td>
+            </tr>
+            <tr>
+                <td>Nhập lại Mật khẩu</td>
+                <td>
+                    <input type="password" name="nhaplaimatkhau" />
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio"
+                        checked 
+                        value="Male" name="gioitinh" />Nam
+                    <input type="radio" value="Female" name="gioitinh" />Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Ngoại ngữ</td>
+                <td>
+                    <input type="checkbox" value="AV" name="ngoaingu" />Anh văn
+                    <input type="checkbox" value="PV" name="ngoaingu" />Pháp
+                    <input type="checkbox" value="HV" name="ngoaingu" />Trung
+                    <input type="checkbox" value="TN" name="ngoaingu" />Nhật
+                    <input type="checkbox" value="TH" name="ngoaingu" />Hàn
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <select name="nghenghiep">
+                        <option value="SV">Sinh viên</option>
+                        <option value="BS">Bác sĩ</option>
+                        <option value="KS" selected>Kĩ sư</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Hình</td>
+                <td>
+                    <input type="file" name="hinh" />
+                </td>
+            </tr>
+            <tr>
+                <td>Thông tin thêm</td>
+                <td>
+                    <textarea name="thongtin" rows="5" cols="40">                        
+                    </textarea>
+                </td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
