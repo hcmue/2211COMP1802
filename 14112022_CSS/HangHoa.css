@@ -1,0 +1,13 @@
+.hh-box{
+    width: 240px; height: 300px; border: 1px solid blue; 
+    position: relative;
+    text-align: center;
+}
+.hh-box:hover{box-shadow: 0px 0px 7px red; border-radius: 7px;}
+.moi-icon{
+    width: 70px; position: absolute; top: 0; right: 0;
+}
+.hh-box-hinh{width: 200px;}
+.hh-box-actions{width: 25px; position: absolute;bottom: 0; right: 5px;}
+.hh-box-price{position: absolute; bottom: 5px; left: 5px;
+    color: red; font-size: large;}
