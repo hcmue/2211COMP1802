@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Họ tên: <input id="hoTen" placeholder="Nhập họ tên">
+        <br>
+        Giới tính:
+        <input id="gtNu" type="radio" name="gioitinh" value="1" checked>Nữ
+        <input type="radio" name="gioitinh" value="0" >Nam
+        <br>
+        <button type="button" onclick="xuLyNhanNutChao()">Chào</button>
+    </div>
+    <script>
+        function xuLyNhanNutChao(){
+            let inputTag = document.getElementById("hoTen");
+            let gtNu = document.getElementById("gtNu");
+            let laNu = gtNu.checked;
+            alert(`Chào ${laNu ? "chị" : "anh"} ${inputTag.value}`);
+        }
+    </script>
+</body>
+</html>

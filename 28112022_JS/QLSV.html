@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+</head>
+<body>
+    <h2>Quản lý Sinh viên</h2>
+    <fieldset>
+        <legend>Thêm sinh viên</legend>
+        <table>
+            <tr>
+                <td>Mã SV</td>
+                <td><input type="text" id="masv" /></td>
+            </tr>
+            <tr>
+                <td>Họ tên</td>
+                <td>
+                    <input id="hoTen" />
+                </td>
+            </tr>
+            <tr>
+                <td>Lớp</td>
+                <td>
+                    <select id="lop">
+                        <option value="48TINA">48.TIN.A</option>
+                        <option value="48TINB">48.TIN.B</option>
+                        <option value="48CNTTA">48.CNTT.A</option>
+                        <option value="48CNTTB">48.CNTT.B</option>
+                        <option value="48CNTTC">48.CNTT.C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Điểm</td>
+                <td>
+                    <input type="number" min="0" max="10" step="0.01" id="diem" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="luuThongTinSV()">Lưu</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Danh sách</legend>
+    </fieldset>
+    <script>
+        function luuThongTinSV(){
+            
+        }
+    </script>
+</body>
+</html>
