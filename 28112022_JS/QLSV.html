@@ -49,10 +49,70 @@
 
     <fieldset>
         <legend>Danh sách</legend>
+        <button type="button" onclick="hienDanhSach()">Lấy danh sách</button>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>MSSV</th>
+                    <th>Họ tên</th>
+                    <th>Lớp</th>
+                    <th>Điểm</th>
+                </tr>
+            </thead>
+            <tbody id="ketqua"></tbody>
+        </table>
     </fieldset>
     <script>
+        const STUDENT_KEY = "DSSV";
+
+        function layDanhSachSV(){
+            let jsonStr = localStorage.getItem(STUDENT_KEY);
+            if(jsonStr === null){
+                return [];
+            } else{
+                let students = JSON.parse(jsonStr);
+                console.log(students);
+                return students;
+            }
+        }
+
+        function hienDanhSach(){
+            let dssv = layDanhSachSV();
+            document.getElementById("ketqua").innerHTML = '';
+            for(let index in dssv){
+                let sv = dssv[index];
+                let chuoi = `<tr><td>${sv.masv}</td><td>${sv.hoTen}</td><td>${sv.lop}</td><td>${sv.diem}</td></tr>`;
+                document.getElementById("ketqua").innerHTML += chuoi;
+            }
+        }
+
         function luuThongTinSV(){
+            //B1: Tạo đối tượng
+            let sv = {
+                masv: document.getElementById("masv").value,
+                hoTen: document.getElementById("hoTen").value,
+                lop: document.getElementById("lop").value,
+                diem: parseFloat(document.getElementById("diem").value)
+            };
+            // console.log(sv)
+            // //B2: Chuyển thành chuỗi JSON
+            // let jsonSV = JSON.stringify(sv);
+            // console.log(jsonSV);
+
+            // //B3: Lưu xuống localStorage
+            // localStorage.setItem("SV", jsonSV)
+            // localStorage.setItem("student", sv)
+
+
+            let dssv = layDanhSachSV();
+            //duyệt vòng lặp kiểm tra xem sv có trong danh sách hay ko dựa vào MSSV
             
+
+            //Thêm vô danh sách
+            dssv.push(sv);
+
+            //Lưu
+            localStorage.setItem(STUDENT_KEY, JSON.stringify(dssv));
         }
     </script>
 </body>
